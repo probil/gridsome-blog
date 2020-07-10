@@ -5,7 +5,7 @@ import DefaultLayout from "~/layouts/Default.vue";
 import VueScrollTo from "vue-scrollto";
 import VueFuse from "vue-fuse";
 
-export default function(Vue, { router, head, isClient }) {
+export default function(Vue, { head }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
 
@@ -19,17 +19,12 @@ export default function(Vue, { router, head, isClient }) {
   head.meta.push({
     name: "keywords",
     content:
-      "Gridsome,Vue,Tailwind,Tailwind CSS,JavaScript,HTML,CSS,Vue.js,VueJS"
+      "Vue.js, JavaScript, FP, npm, тестування, функціональне програмування, переклади, статті, веб, програмування"
   });
 
   head.meta.push({
     name: "description",
-    content: "Gridsome Portfolio Starter"
-  });
-
-  head.meta.push({
-    name: "author",
-    content: "Andre Madarang"
+    content: "Кращі технічні статті"
   });
 
   head.link.push({

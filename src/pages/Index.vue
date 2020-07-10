@@ -6,7 +6,7 @@
         <div class="text-copy-secondary mb-4">
           <span>{{ post.node.date }}</span>
           <span> &middot; </span>
-          <span>{{ post.node.timeToRead }} min read</span>
+          <span>{{ post.node.timeToRead }} хв читання</span>
         </div>
 
         <div class="text-lg mb-4">
@@ -14,7 +14,7 @@
         </div>
 
         <div class="mb-8">
-          <g-link :to="post.node.path" class="font-bold uppercase">Read More</g-link>
+          <g-link :to="post.node.path" class="font-bold uppercase">Продовжити читання</g-link>
         </div>
       </div> <!-- end post -->
 
@@ -40,7 +40,7 @@ query Posts ($page: Int) {
       node {
         id
         title
-        date (format: "MMMM D, Y")
+        date (format: "D MMMM, Y", locale: "uk")
         summary
         timeToRead
         path
@@ -55,7 +55,7 @@ import PaginationPosts from '../components/PaginationPosts'
 
 export default {
   metaInfo: {
-    title: 'Blog'
+    title: 'Список статей'
   },
   components: {
     PaginationPosts

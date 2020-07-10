@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="container-inner mx-auto py-16">
-      <h2 class="text-4xl font-bold mb-16">Page Not Found</h2>
+      <h2 class="text-4xl font-bold mb-16">Сторінки не знайдено</h2>
       <g-image src="../../static/404.svg" alt="404 page not foud"/>
     </div>
 
@@ -11,7 +11,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Page Not Found'
+    title: 'Сторінки не знайдено'
   }
 }
 </script>

@@ -5,10 +5,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: "Gridsome Portfolio Starter",
+  siteName: "Кращі технічні статті",
   siteDescription:
-    "A simple portfolio theme for Gridsome powered by Tailwind CSS v1",
-  siteUrl: "https://gridsome-portfolio-starter.netlify.com",
+    "Переклади технічних статей українською",
+  siteUrl: "",
   plugins: [
     {
       use: "gridsome-plugin-tailwindcss"
@@ -23,28 +23,6 @@ module.exports = {
             typeName: "Tag",
             create: true
           }
-        }
-      }
-    },
-    {
-      use: "gridsome-plugin-rss",
-      options: {
-        contentTypeName: "Post",
-        feedOptions: {
-          title: "Gridsome Portfolio Starter Blog",
-          feed_url: "https://gridsome-portfolio-starter.netlify.com/rss.xml",
-          site_url: "https://gridsome-portfolio-starter.netlify.com/"
-        },
-        feedItemOptions: node => ({
-          title: node.title,
-          description: node.summary,
-          url: "https://gridsome-portfolio-starter.netlify.com" + node.path,
-          author: "Andre Madarang",
-          date: node.date
-        }),
-        output: {
-          dir: "./static",
-          name: "rss.xml"
         }
       }
     },

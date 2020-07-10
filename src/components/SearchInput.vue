@@ -5,7 +5,7 @@
     <div class="relative w-80">
       <input
         type="text"
-        placeholder="Search (Press  &quot;/&quot; to focus)"
+        placeholder="Пошук за словом..."
         class="bg-background-form border border-gray-500 rounded-full px-4 pl-10 py-2 outline-none focus:border-green-500 w-80"
         v-model="query"
         @input="softReset"
@@ -65,8 +65,7 @@
             class="bg-background-form font-normal w-full border-b cursor-pointer p-4"
           >
             <p class="my-0">
-              No results for '
-              <strong>{{ query }}</strong>'
+              За запитом '<strong>{{ query }}</strong>' нічого не знайдено
             </p>
           </div>
         </div>
