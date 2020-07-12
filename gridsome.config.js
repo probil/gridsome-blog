@@ -23,6 +23,18 @@ module.exports = {
             typeName: "Tag",
             create: true
           }
+        },
+        remark: {
+          plugins: [
+            ['@noxify/gridsome-plugin-remark-embed', {
+              enabledProviders: ['Twitter'],
+              Twitter: {
+                hideConversation: false,
+                hideMedia: false,
+                align: 'center'
+              }
+            }]
+          ]
         }
       }
     },

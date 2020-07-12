@@ -11,6 +11,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.1",
     "@gridsome/vue-remark": "^0.2.2",
+    "@noxify/gridsome-plugin-remark-embed": "^1.2.1",
     "axios": "^0.19.2",
     "gridsome": "^0.7.18",
     "gridsome-plugin-remark-shiki": "^0.3.1",
