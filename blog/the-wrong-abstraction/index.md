@@ -1,10 +1,14 @@
 ---
 title: Хибна абстракція
-originalArticleUrl: https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction
-originalAuthor: Sandi Metz
-date: 2016-01-20
+date: 2020-07-12
 summary: Я роздумувала про "хибну абстракцію". Моя доповідь на RailsConf у 2014-му містила секцію в якій я заявила що дублювання набагато дешевше за невірну абстракцію
 tags: ['програмування', 'ООП', 'архітектура', 'абстракція']
+originalArticleUrl: https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction
+originalArticleName: The Wrong Abstraction
+originalAuthor: Sandi Metz
+cover: ./images/neonbrand--Cmz06-0btw-unsplash.jpg
+coverAuthor: NeonBrand
+coverAuthorLink: https://unsplash.com/@neonbrand?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText
 ---
 Я роздумувала про "хибну абстракцію". Моя доповідь на RailsConf у 2014-му ["all the little things"](https://youtu.be/8bZh5LMaSmE) містила секцію в якій [я заявила](https://youtu.be/8bZh5LMaSmE?t=893):
 
