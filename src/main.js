@@ -31,9 +31,4 @@ export default function(Vue, { head }) {
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,700"
   });
-
-  head.script.push({
-    src: "https://platform.twitter.com/widgets.js",
-    defer: true
-  })
 }

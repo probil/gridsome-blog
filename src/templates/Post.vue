@@ -51,7 +51,11 @@ query Post ($path: String!) {
 export default {
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.$page.post.title,
+      script: [{
+        src: "https://platform.twitter.com/widgets.js",
+        defer: true,
+      }]
     }
   }
 }
