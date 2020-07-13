@@ -3,12 +3,12 @@
     <div class="container-inner mx-auto my-16">
       <h1 class="text-4xl font-bold leading-tight">{{ $page.post.title }}</h1>
       <div class="text-xl text-gray-600 mb-4">{{ $page.post.date }}</div>
-      <div class="mb-8 border-t border-b px-4 py-3" role="alert" v-if="$page.post.originalArticleUrl">
-        🌐 Це переклад статті: <a :href="$page.post.originalArticleUrl" rel="noopener" target="_blank"><span class="font-bold">{{ $page.post.originalArticleName }}</span> від {{ $page.post.originalAuthor }}</a>
+      <div class="mb-8 border-t border-b px-4 py-3" role="alert" v-if="$page.post.originalArticle">
+        🌐 Це переклад статті: <a :href="$page.post.originalArticle.url" rel="noopener" target="_blank"><span class="font-bold">{{ $page.post.originalArticle.title }}</span> від {{ $page.post.originalArticle.author }}</a>
       </div>
       <div v-if="$page.post.cover">
-        <g-image :src="$page.post.cover" alt="Обкладинка статті" />
-        <p class="text-center text-gray-700 mb-4 mt-2">Фото від <a :href="$page.post.coverAuthorLink" target="_blank" rel="noopener">{{ $page.post.coverAuthor }}</a></p>
+        <g-image :src="$page.post.cover.file" alt="Обкладинка статті" />
+        <p class="text-center text-gray-700 mb-4 mt-2">Фото від <a :href="$page.post.cover.authorLink" target="_blank" rel="noopener">{{ $page.post.cover.author }}</a></p>
       </div>
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="flex mb-8 text-sm">
@@ -37,12 +37,16 @@ query Post ($path: String!) {
       title
       path
     }
-    cover
-    coverAuthor
-    coverAuthorLink
-    originalArticleUrl
-    originalArticleName
-    originalAuthor
+    cover {
+      file
+      author
+      authorLink
+    }
+    originalArticle {
+      url
+      title
+      author
+    }
   }
 }
 </page-query>
