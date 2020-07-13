@@ -7,7 +7,7 @@
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
         <div>
           <g-link to="/">
-            <g-image src="../../static/playful_cat.svg" class="w-16 md:w-32" alt="logo"/>
+            <g-image src="../../static/playful_cat.svg" :immediate="true" class="w-16 md:w-32" alt="logo"/>
           </g-link>
         </div>
         <div class="block lg:hidden">
