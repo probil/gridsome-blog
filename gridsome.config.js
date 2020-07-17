@@ -40,7 +40,7 @@ module.exports = {
         [
           "@noxify/gridsome-plugin-remark-embed",
           {
-            enabledProviders: ['Twitter'],
+            enabledProviders: ['Twitter', 'Youtube'],
             Twitter: {
               hideConversation: false,
               hideMedia: false,
