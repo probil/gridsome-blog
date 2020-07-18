@@ -45,7 +45,7 @@ https://twitter.com/rauchg/status/807626710350839808
 
 Ось [слайд](http://slides.com/kentcdodds/testing-workshop#/4/8) з мого воркшопу для FrontendMasters: ["Тестування JavaScript додатків"](https://frontendmasters.com/courses/testing-javascript).
 
-![Піраміда тестування](images/2.png)
+![Піраміда тестування](./images/2.png)
 
 Ця піраміда тестування — комбінація тієї яку я взяв з [блогу Мартіна Фавлера](https://martinfowler.com/bliki/TestPyramid.html) та тієї які я взяв з [блогу Google Testing](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html).
 
