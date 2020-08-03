@@ -135,3 +135,35 @@ categories[ids_by_name['abs']] // {id: '32o8wafe', name: 'abs', ...}
 const category_order = ['32o8wafe', 'oaiwefjo', '3oij2e3c']
 category_order.map(id => categories[id])
 ```
+
+Це хороший підхід, однак він вимагає збереження масиву що забезпечує порядок окремо від наших даних, що є неоптимальним. Зробімо це правильно з індексами.
+
+Ми надсилаємо дані з нашого бекенду з ключем `order` (або `idx`) що вказує позицію елемента, потім **робимо індекс за ключем `order` так само як ми б робили для будь-якого іншого ключа**:
+
+```js
+const ids_by_order =
+      Object.values(categories)
+            .reduce((ordered_ids, category) => {
+                        ordered_ids[category.order] = category.id
+                        return ordered_ids
+                    }, [])
+```
+
+```js
+// ['32o8wafe', 'oaiwefjo', '3oij2e3c']
+```
+
+Зверніть увагу, що ця операція `reduce` створює масив індексів, а не об'єкт. Масив у JavaScript насправді є лише об'єктом з ключами 0, 1, 2, ..., тому тепер ми маємо як `O(1)` доступ до певного `id` за ключем `order`, так і можливість використовувати `map`, `filter` та `reduce` на упорядкованому списку:
+
+```js
+const second_category = categories[ids_by_order[1]]
+// {id: 'oaiwefjo', name: 'arms', order: '1'}
+```
+
+```js
+const ordered_names = ids_by_order.map(id => categories[id].name)
+// ['abs', 'arms', 'legs']
+```
+
+> #### Їжа для роздумів:
+> Чому цей підхід працюватиме, навіть коли порядкові номери мають прогалини? напр. 0, 2, 41, 399
