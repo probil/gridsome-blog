@@ -2,7 +2,7 @@
 title: Використання Redux сховища як бази даних
 date: 2020-07-29
 summary: Ґільєрмо Рауч нещодавно твітнув це. Нумо розберімось що ж це означає
-tags: []
+tags: ['redux', 'архітектура', 'flux', 'javascript', 'react']
 originalArticle:
     url: https://hackernoon.com/shape-your-redux-store-like-your-database-98faa4754fd5
     title: Using the Redux Store Like a Database
@@ -211,7 +211,29 @@ const abs_id = ids_by_name(categories)['abs']
 > React та Flux / Redux розв'язали проблему […] рендерингу та управління даними. Зараз стало можливим створювати справді передові веб-додатки, орієнтуючись на фактичний домен, а не боротися з внутрішньою реалізацією.
 >
 > Однак проблема полягає в тому, що системи постійно зростають. Ми створюємо більше графічних інтерфейсів і завантажуємо та перетворюємо ще більше даних…
-> — Роман Лютіков: [On Web Apps and Databases](https://medium.com/@roman01la/on-web-apps-and-databases-c026f77b93f4)
+> — Роман Лютіков: [Про веб-додатки та бази даних](https://medium.com/@roman01la/on-web-apps-and-databases-c026f77b93f4)
 
 
-Коли фронтенд частини починають наближатися по складності до бекенд частин, ми продовжуємо повторно реалізовувати речі, які вже десятиліттями існують на бекенді: бази даних, черги повідомлень та інша стереотипна серверна інфраструктура. Багато підходів фронтенду, що вважаються сучасними — як от функціонально-реактивне програмування — існують [з часів Windows 3.1](https://tomjoro.github.io/2017-02-03-why-reactive-fp-sucks/).
+Коли фронтенд частини починають наближатися по складності до бекенд частин, ми продовжуємо повторно реалізовувати речі, які вже десятиліттями існують на бекенді: бази даних, черги повідомлень та інша стереотипно серверна інфраструктура. Багато підходів фронтенду, що вважаються сучасними — як от функціонально-реактивне програмування — існують [з часів Windows 3.1](https://tomjoro.github.io/2017-02-03-why-reactive-fp-sucks/).
+
+Уроки керування станом, засвоєні нами у 90-х від баз даних SQL, можуть бути застосовані до фронтенду, щоб допомогти нам зберегти чіткість, елегантність та узгодженість даних. Використання індексів для уникнення дублювання та перехід до конкретних частин центрального, послідовного набору даних є одним із таких прикладів, і я впевнений, що є ще багато інших, що мені ще належить відкрити.
+
+## Подальше ознайомлення
+
+Якщо вам хочеться більше функцій від баз даних у браузері, зацініть: [redux-orm](redux-orm), [IndexedDB](https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB) (заміна Web SQL), та [GraphQL](http://graphql.org/). Та пам'ятаєте, що не слід встановлювати бібліотеки допоки ви не впевнені навіщо вони вам потрібні.
+
+- http://redux.js.org/docs/basics/Reducers.html#designing-the-state-shape
+- http://redux.js.org/docs/recipes/reducers/NormalizingStateShape.html
+- https://egghead.io/lessons/javascript-redux-normalizing-the-state-shape
+- https://stackoverflow.com/questions/33940015/how-to-choose-the-redux-state-shape-for-an-app-with-list-detail-views-and-pagina
+- https://stackoverflow.com/questions/34995822/how-to-get-best-practice-react-redux-nested-array-data
+- https://codeburst.io/how-to-store-your-state-data-f17ceca37aa
+- https://tonyhb.gitbooks.io/redux-without-profanity/content/normalizer.html
+- https://github.com/tommikaikkonen/redux-orm
+
+## TL;DR
+
+- Зберігайте дані свого сховище у нормалізованому вигляді `{id: {id, attr1, attr2, attr3}}`
+- Зробіть індекси `{attr: id}` для швидкого `O(1)` доступу за допомогою інших ключів, наприклад `ids_by_name`
+- Ітеруйтесь відсортованими даними за допомогою індексу масиву `ids_by_order.map(id => data[id])`
+- Якщо ваші дані часто змінюються використовуйте чисті функції для створення індексів та мемоізовуйте їх
