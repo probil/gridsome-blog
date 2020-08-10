@@ -1,7 +1,7 @@
 ---
 title: Використання Redux сховища як бази даних
-date: 2020-07-29
-summary: Ґільєрмо Рауч нещодавно твітнув це. Нумо розберімось що ж це означає
+date: 2020-08-10
+summary: Індекси можуть допомогти подивитись на дані під різними кутами
 tags: ['redux', 'архітектура', 'flux', 'javascript', 'react']
 originalArticle:
     url: https://hackernoon.com/shape-your-redux-store-like-your-database-98faa4754fd5
