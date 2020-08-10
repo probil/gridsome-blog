@@ -7,8 +7,8 @@
         🌐 Це переклад статті: <a :href="$page.post.originalArticle.url" rel="noopener" target="_blank"><span class="font-bold">{{ $page.post.originalArticle.title }}</span> від {{ $page.post.originalArticle.author }}</a>
       </div>
       <div v-if="$page.post.cover">
-        <g-image :src="$page.post.cover.file" alt="Обкладинка статті" />
-        <p class="text-center text-gray-700 mb-4 mt-2">Фото від <a :href="$page.post.cover.authorLink" target="_blank" rel="noopener">{{ $page.post.cover.author }}</a></p>
+        <g-image :src="$page.post.cover.file" alt="Обкладинка статті" class="mx-auto"/>
+        <p class="text-center text-gray-700 mb-4 mt-2" v-if="$page.post.cover.author">Фото від <a :href="$page.post.cover.authorLink" target="_blank" rel="noopener">{{ $page.post.cover.author }}</a></p>
       </div>
       <div class="markdown-body mb-8" v-html="$page.post.content" />
       <div class="flex flex-wrap mb-4 text-sm">
