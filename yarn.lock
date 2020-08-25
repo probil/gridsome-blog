@@ -982,14 +982,14 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@noxify/gridsome-plugin-remark-embed@1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@noxify/gridsome-plugin-remark-embed/-/gridsome-plugin-remark-embed-1.2.1.tgz#505d721cc3ed83a80743d1bb190980aefe44141a"
-  integrity sha512-9pYgCTscWEbpfr6DBfYHmWGk1BMnQOLmaAYbYmhD/POZ8H8H3NRyo+3tTolYtqQaKBHHDerssvl8sOEPo/HwAw==
+"@noxify/gridsome-plugin-remark-embed@1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@noxify/gridsome-plugin-remark-embed/-/gridsome-plugin-remark-embed-1.3.1.tgz#446c697da062277219e4aae82d875fc903f2cdf2"
+  integrity sha512-/IuRkMSrQaGlxzrfLKEYET5+B0j9W2j2uA3nGL6N/0K+X2otIsZaSHBl1TV3MAKuQIZbIGnuFmpe3CFWViXwGg==
   dependencies:
     cheerio "^1.0.0-rc.3"
     handlebars "^4.7.6"
-    lodash "4.17.15"
+    lodash "4.17.20"
     node-fetch "^2.6.0"
     parse-numeric-range "^1.2.0"
     querystring "^0.2.0"
@@ -5675,15 +5675,20 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4.17.15, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+lodash@4.17.20:
+  version "4.17.20"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
 lodash@^4.15.0:
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
+
+lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
 
 log-update@^2.3.0:
   version "2.3.0"
