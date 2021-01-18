@@ -20,6 +20,6 @@
     "vue-scrollto": "2.20.0"
   },
   "devDependencies": {
-    "gridsome-plugin-tailwindcss": "3.0.1"
+    "gridsome-plugin-tailwindcss": "4.1.1"
   }
 }
