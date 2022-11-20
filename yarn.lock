@@ -4042,11 +4042,6 @@ function-bind@^1.1.1:
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
-fuse.js@^6.4.4:
-  version "6.4.6"
-  resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-6.4.6.tgz#62f216c110e5aa22486aff20be7896d19a059b79"
-  integrity sha512-/gYxR/0VpXmWSfZOIPS3rWwU8SHgsRTwWuXhyb2O6s7aRuVtHtxCkR33bNYu3wyLyNx/Wpv0vU7FZy8Vj53VNw==
-
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -9867,12 +9862,17 @@ vscode-textmate@^5.2.0:
   resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-5.2.0.tgz#01f01760a391e8222fe4f33fbccbd1ad71aed74e"
   integrity sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==
 
-vue-fuse@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/vue-fuse/-/vue-fuse-3.0.0.tgz#cba69bd38b36535f6ae788df1c07abe9d7010228"
-  integrity sha512-4OA6uxVqEyqT4tZhBT5lObSOpARU5Kljv88QPlbkIQvIhRYokjsb8O/R2fCmfPZU/XUdRKuG884ZAOEGwJTvNg==
+vue-demi@^0.11.4:
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
+  integrity sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==
+
+vue-fuse@4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/vue-fuse/-/vue-fuse-4.1.1.tgz#2554e269b683055506ebb318de0ff2882c7f46e4"
+  integrity sha512-bhuTiniVK3HmTcxvksrzPgDWPFTEDYiWbJa01E7yT2lRPtE4BVb5cXUBUmqtb5rCkDOsLgMh1n9mRlHQImYNkA==
   dependencies:
-    fuse.js "^6.4.4"
+    vue-demi "^0.11.4"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
